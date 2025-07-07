@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quem é Pedro Norien – trajetória, propósito e impacto.">
+  <title>Quem Sou – Pedro Norien</title>
+
+  <!-- Tipografia -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+
+  <style>
+    :root {
+      --c-primary: #005F6B;
+      --c-dark: #1A1A1A;
+      --c-light: #F5F7FA;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--c-dark);
+      background: #FFFFFF;
+      line-height: 1.4;
+    }
+    .container {
+      width: 90%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: clamp(2rem,4vw,4rem) 0;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem,6vw,4rem);
+    }
+    h2 {
+      font-size: clamp(1.8rem,5vw,3rem);
+    }
+    h3 {
+      font-size: clamp(1.25rem,4.5vw,1.75rem);
+      margin-top: 1.5rem;
+    }
+    p {
+      font-size: clamp(1rem,3.8vw,1.25rem);
+      margin-bottom: 1rem;
+    }
+    .separator {
+      width: 100%;
+      height: 1px;
+      background: #D9D9D9;
+      margin: 0;
+    }
+    .block {
+      padding: clamp(2rem,5vw,3.5rem) 0;
+    }
+    .center {
+      text-align: center;
+    }
+    .portrait {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .logo-row img {
+      height: 48px;
+    }
+    nav.sticky-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #FFF;
+      box-shadow: 0 2px 4px rgba(0,0,0,.06);
+      z-index: 100;
+    }
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #FFFFFF;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .sticky-nav a {
+      margin: 0 24px;
+      padding: 16px 0;
+      font-weight: 700;
+      font-size: 20px;
+      color: #005F6B;
+      text-decoration: none;
+    }
+    .sticky-nav a:hover,
+    .sticky-nav a.active {
+      border-bottom: 2px solid #005F6B;
+    }
+    .highlight {
+      background: var(--c-light);
+    }
+    .descriptor {
+      font-size: clamp(.9rem,3vw,1rem);
+      margin-top: .5rem;
+      color: var(--c-primary);
+    }
+    .sub {
+      font-weight: 400;
+    }
+    .delivery {
+      margin-top: 1.5rem;
+      font-weight: 400;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      background-color: var(--c-primary);
+      color: #FFFFFF;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: .9rem;
+      color: var(--c-dark);
+    }
+    .footer-link {
+      color: var(--c-primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+<nav class="sticky-nav">
+  <a href="index.html">Home</a>
+  <a href="quem-sou.html">Quem sou</a>
+  <a href="o-que-faco.html">O que faço</a>
+</nav>
+
+  <!-- BLOCO 1 -->
+  <section class="block center container">
+    <img src="PATH_TO_IMAGE" alt="Retrato de Pedro Norien" class="portrait">
+    <h1>Pedro Norien</h1>
+    <p style="color:var(--c-primary); font-weight:400;">
+      Gestor de inteligência financeira.
+    </p>
+    <p class="descriptor">
+      <strong>+R$ 1,5 bi</strong> em dados analisados | <strong>Dezenas de empresas</strong> impactadas
+    </p>
+  </section>
+  <hr class="separator">
+
+  <!-- BLOCO 2 -->
+  <section class="block container">
+    <h2>Da origem ao propósito</h2>
+    <p class="sub">
+      Venho de uma família simples e, com o apoio e dedicação dos meus pais, alcancei lugares inimagináveis.
+    </p>
+    <p class="sub">
+      No 7º Semestre, troquei Engenharia Mecânica por Administração na UFBA, atuei em grupos de pesquisa em inovação e resiliência urbana, movimento Empresa Júnior e vivi experiências em diversas empresas, do chão de fábrica ao comitê executivo. Essa bagagem me levou a construir uma metodologia de controles e planejamento que eleva a qualidade e expõe oportunidades que só um olhar sistêmico pode oferecer.
+    </p>
+    <p class="sub">
+      Hoje, como Gestor de Inteligência Financeira Empresarial na Norien, uso essa experiência para engajar decisores e impulsionar crescimento sustentável, transformando dados em visão de futuro.
+    </p>
+  </section>
+  <hr class="separator">
+
+  <!-- BLOCO 3 -->
+  <section class="block highlight container">
+    <h2 style="color:var(--c-primary);">Minha linha do tempo</h2>
+
+    <h3>Academia e Pesquisa</h3>
+    <p>
+      <strong>Empresa Júnior</strong> – Atuação em projetos que despertou meu interesse por empreendedorismo, gestão e ação.
+    </p>
+    <p>
+      <strong>Grupos de Pesquisa em Inovação e Resiliência Urbana</strong> – Participação em estudos sobre sustentabilidade na UFBA.
+    </p>
+    <p>
+      <strong>Câmara de Inovação para Sustentabilidade de Salvador</strong> – Colaboração em iniciativas e fóruns que promovem práticas sustentáveis no setor público e privado.
+    </p>
+    <p>
+      <strong>Câmara de Resiliência Urbana</strong> – Contribuição em projetos voltados ao fortalecimento da resiliência das cidades frente a desafios climáticos e sociais.
+    </p>
+    <p>
+      <strong>Produção Acadêmica</strong> – Autor e coautor de artigos sobre estratégias de resiliência, publicados em periódicos.
+    </p>
+
+    <h3>Operações e Custos</h3>
+    <p>
+      <strong>JSG | Heineken</strong> – Análise e gestão logística com foco em redução de desperdícios e controle de custo de frotas.
+    </p>
+
+    <h3>Disciplina Financeira</h3>
+    <p>
+      <strong>Santander</strong> – Métodos de planejamento financeiro corporativo, compliance e governança de riscos.
+    </p>
+
+    <h3>Sistemas de Gestão</h3>
+    <p>
+      <strong>Souto - Inteligência Empresarial</strong> – Contabilidade, implantação de ERPs e integração de dados para dezenas de pequenos negócios.
+    </p>
+
+    <h3>Varejo em Expansão</h3>
+    <p>
+      <strong>SoulDila</strong> – Processos financeiros para cinco lojas em ritmo acelerado de crescimento.
+    </p>
+
+    <h3>Scale-up Digital</h3>
+    <p>
+      <strong>Caffeine Army</strong> – Estruturei o setor financeiro do zero para 130+ pessoas, apoiando receita de centenas de milhões.
+    </p>
+
+    <h3>Construtora de Alto Padrão</h3>
+    <p>
+      <strong>Santa Helena Incorporações</strong> – Coordenei FP&A, integrando dados de obras, fluxo de caixa e projeções de capital.
+    </p>
+
+    <p class="delivery">
+      Essas etapas consolidaram a visão <strong>Diagnóstico Financeiro 360°</strong> — decisões mais rápidas, transparentes e alinhadas à margem &amp; escala.
+    </p>
+  </section>
+  <hr class="separator">
+
+  <!-- BLOCO 4 -->
+  <section class="block container">
+    <h2>Missão Atual</h2>
+    <p class="sub">
+      Minha razão de ser é impulsionar o crescimento do seu negócio — quando sua empresa avança, eu avanço junto.  
+      Como <strong>aliado de impacto</strong>, atuo lado a lado com líderes para gerar resultados reais.
+    </p>
+  </section>
+  <hr class="separator">
+
+  <!-- CTA Final -->
+  <section class="block center container">
+    <h2>Quer saber como posso alavancar seu negócio?</h2>
+    <a href="https://wa.me/55SEUNUMERO?text=Olá,+quero+iniciar+a+triagem+inteligente" class="cta-btn">
+       Iniciar diagnóstico inteligente.
+    </a>
+    <p style="margin-top:.75rem;font-size:.9rem;">
+      IA criada por mim, reflete minha forma de pensar negócios.
+    </p>
+  </section>
+  <hr class="separator">
+
+  <footer>
+    <p>&copy; 2025 Pedro Norien. <a href="#" class="footer-link">Política de Privacidade</a></p>
+  </footer>
+
+  <!-- Script para mês atual (urgency-tag) -->
+  <script>
+    const m = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+    const el = document.getElementById('mes-atual');
+    if (el) {
+      el.textContent = m[new Date().getMonth()];
+    }
+  </script>
+
+</body>
+</html>

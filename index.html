@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consultoria em performance financeira para decisões claras. +R$ 1,5 bi em dados estruturados para líderes estratégicos.">
+  <meta name="theme-color" content="#005F6B">
+  <link rel="icon" href="favicon.ico">
+  <title>Pedro Norien – Consultoria em Inteligência Financeira e IA para Empresas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    html, body { margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; color: #1A1A1A; background-color: #FFFFFF; }
+    
+/* botão flutuante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+.whatsapp-float img {
+  width: 36px;
+  height: 36px;
+}
+
+/* animações para o bloco1 */
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  70% { opacity: 1; transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+    }
+    @keyframes bouncePortrait {
+      0%,20%,50%,80%,100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    /* fade-in sequencial para itens do bloco3 */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* typewriter effect */
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 74%; }
+    }
+    @keyframes blinkCursor {
+      50% { border-color: transparent; }
+    }
+
+    /* 1. Definição da animação pulse */
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    } 
+
+    /* 2. Garantir transição suave */
+    .cta-btn {
+      transition: transform 0.3s ease-in-out;
+    } 
+
+    /* 3. Disparar pulse ao passar o mouse */
+    .cta-btn:hover {
+      animation: pulse 0.9s ease-in-out 1;
+      }
+    /* 4. Estilo do botão */
+    .cta-btn {animation: pulse 1.5s ease-in-out infinite; 
+      display: inline-block; 
+      padding: 14px 24px; 
+      background-color: #005F6B; 
+      color: #FFFFFF; 
+      font-size: 24px; 
+      font-weight: 700; 
+      text-decoration: none; 
+      border-radius: 8px; 
+      margin: 20px 0;
+    }
+
+    .flyer {
+      width: 1080px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .block { padding: 60px 80px; }
+    .separator { width: 100%; height: 1px; background-color: #D9D9D9; margin: 0; }
+
+    /* bloco1: só anima quando recebe .animate */
+    .block1 {
+      text-align: center;
+    }
+    .block1.animate {
+      animation: fadeSlideUp 2s ease-out both;
+    }
+    .block1.animate img {
+      animation: bouncePortrait 2s ease;
+    }
+    .block1 h1 { margin: 0; font-size: 80px; font-weight: 700; }
+    .block1 p { margin-top: 60px; margin: 12px 0; font-size: 26px; font-weight: 400; }
+    .block1 .descriptor { margin-top: 12px; font-size: 20px; font-weight: 400; color: #005F6B; }
+
+    .logo-bar { display: flex; justify-content: center; gap: 32px; margin-top: 20px;align-items: flex-end; }
+    .logo-bar img {
+      max-height: 40px;
+      max-width: 100px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      
+    }
+
+    .block2 { text-align: left; }
+    .block2 p { margin: 0; font-size: 30px; font-weight: 700;margin-bottom: 16px; }
+    .block2 .sub { margin-top: 8px; font-size: 20px; font-weight: 400;line-height: 1.4;
+  color: #333333; }
+
+    .block3 { background-color: #F5F7FA; }
+    .block3 h2 { margin: 0; font-size: 36px; font-weight: 700; color: #005F6B; }
+    .block3 p { margin: 12px 0; font-size: 22px; font-weight: 400; }
+    .block3 ul { list-style: none; padding: 0; margin: 20px 0; }
+    .block3 ul li {
+      opacity: 0;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 48px;
+      color: #1A1A1A;
+    }
+    .block3 ul li:before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 27px;
+      color: #005F6B;
+    }
+    .block3 .delivery {
+      opacity: 0;
+      margin-top: 16px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    /* só anima quando recebe .animate */
+    .block3.animate ul li {
+      animation: fadeIn 0.5s forwards;
+    }
+    .block3.animate ul li:nth-child(1) { animation-delay: 0.5s; }
+    .block3.animate ul li:nth-child(2) { animation-delay: 1.0s; }
+    .block3.animate ul li:nth-child(3) { animation-delay: 1.5s; }
+    .block3.animate ul li:nth-child(4) { animation-delay: 2.0s; }
+    .block3.animate ul li:nth-child(5) { animation-delay: 2.5s; }
+    .block3.animate .delivery {
+      animation: fadeIn 0.3s forwards;
+      animation-delay: 1.7s;
+    }
+
+    .block4 { text-align: left; }
+    .block4 p { margin: 0; font-size: 28px; font-weight: 700; }
+    .block4 .sub { margin-top: 8px; font-size: 22px; font-weight: 400; }
+
+    .block5 { background-color: #F5F7FA; text-align: center; }
+    .block5 .cta {
+      margin: 20px 0 40px;
+      font-size: 41px;
+      font-weight: 700;
+      color: #005F6B;
+    }
+    .block5 .qr-placeholder {
+      width: 300px;
+      height: 300px;
+      border: 2px dashed #005F6B;
+      margin: 0 auto 40px;
+    }
+    .block5 .contact {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+      display: inline-block;
+      text-align: left;
+    }
+
+    /* typewriter: só anima quando .animate */
+    .intel-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #005F6B;
+      width: 0;
+    }
+    .intel-text.animate {
+      animation: typing 5s steps(60) 0.1s forwards,
+                 blinkCursor 1.0s step-end infinite;
+    }
+
+    /* letreiro de testemunhos */
+    .testimonials-container {
+      overflow: hidden;
+      height: 100px;
+      margin: 40px 0;
+    }
+    .testimonials-track {
+      display: inline-flex;
+      animation: marquee 80s linear infinite;
+      white-space: nowrap;
+    }
+    .testimonial {
+      margin-right: 60px;
+      font-size: 20px;
+      font-style: italic;
+      color: #1A1A1A;
+    }
+    .testimonial-author {
+      display: block;
+      margin-top: 4px;
+      font-size: 19px;
+      font-weight: 700;
+      color: #005F6B;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-100%); }
+    }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #FFFFFF;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .sticky-nav a {
+      margin: 0 24px;
+      padding: 16px 0;
+      font-weight: 700;
+      font-size: 20px;
+      color: #005F6B;
+      text-decoration: none;
+    }
+    .sticky-nav a:hover,
+    .sticky-nav a.active {
+      border-bottom: 2px solid #005F6B;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background-color: #005F6B;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .urgency {
+      font-size: 15px;
+      color: #D82323;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sticky-nav">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+  </nav>
+
+  <div class="flyer">
+
+    <!-- BLOCO 1 -->
+    <div class="block block1">
+      <img src="foto-pedro.jpg" alt="Retrato profissional de Pedro Norien" style="width:120px;border-radius:9999px;margin-bottom:24px">
+      <h1>Pedro Norien</h1>
+      <p style="font-size:22px;color:#1A1A1A;margin-top:4px;">Gestor estratégico de finanças e IA.</p>
+      <p style="color:#005F6B;margin-top:80px;">Estruturo finanças para decisões estratégicas.</p>
+      <p class="descriptor">+R$ 1,5 bi analisados • +20 empresas atendidas</p>
+      <div class="logo-bar">
+        <img src="Imagens/Brasilkirin.png" alt="Brasil Kirin">
+        <img src="Imagens/Santander.png" alt="Santander">
+        <img src="Imagens/CaffeineArmy.png" alt="Caffeine Army">
+        <img src="Imagens/SantaHelena.png" alt="Santa Helena">
+        <img src="Imagens/Souldila.png" alt="Souldila">
+
+      </div>
+    </div>
+    <hr class="separator">
+
+    <!-- BLOCO 2 -->
+    <div class="block block2">
+      <p>Negócios precisam de direção, não só números.</p>
+      <p class="sub">Implemento inteligência artificial e profissionalizo a gestão financeira. Com leitura estratégica, transformo dados em decisões.</p>
+    </div>
+    <hr class="separator">
+
+    <!-- BLOCO 3 -->
+    <div class="block block3">
+      <h2>Diagnóstico Financeiro 360°</h2>
+      <p>Visão completa da sua operação com análise, automação e roadmap de ações imediatas.</p>
+      <ul>
+        <li><strong>Implantação de IA:</strong> agentes, fluxos e automações</li>
+        <li><strong>Dashboards inteligentes:</strong> visão panorâmica e relatórios automatizados</li>
+        <li><strong>Modelagem financeira:</strong> DRE, fluxo de caixa, orçamento, precificação, etc</li>
+        <li><strong>Governança:</strong> controles internos, políticas e indicadores</li>
+        <li><strong>Mapeamento de processos:</strong> gargalos e otimização operacional</li>
+      </ul>
+      <p class="delivery">Tudo estruturado em etapas enxutas e orientado por dados.</p>
+    </div>
+    <hr class="separator">
+
+    <!-- BLOCO 4 -->
+    <div class="block block4">
+      <p>Atuação direta, sem intermediários.</p>
+      <p class="sub">Conduzo cada projeto pessoalmente, garantindo qualidade, sigilo e alinhamento estratégico.</p>
+    </div>
+    <hr class="separator">
+
+    <!-- BLOCO 5 -->
+    <div class="block block5">
+      <p class="cta">Quer clareza real sobre<br>sua operação financeira?</p>
+      <a href="https://wa.me/5571993184061?text=Olá,+quero+iniciar+a+triagem+inteligente+com+IA+para+a+Leitura+360º" class="cta-btn">
+        Iniciar Diagnóstico Gratuito
+      </a>
+      <p class="urgency">⚡Resposta em até 1 dia útil.</p>
+      <p class="intel-text" style="font-size:15px;margin-top:16px;">
+        IA criada por mim. Ela reflete minha forma de pensar estratégia, margem e crescimento.<br>
+              </p>
+    </div>
+
+  </div>
+
+  <!-- Footer personalizado -->
+  <footer style="background:#005F6B; color:#FFFFFF; text-align:center; padding:1rem 0; font-size:.85rem;">
+    <p>© 2025 Pedro Norien. <a href="#" style="color:#FFFFFF; text-decoration:underline;">Política de Privacidade</a></p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const options = { threshold: 0.3 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.remove('animate');
+          }
+        });
+      }, options);
+
+      document.querySelectorAll('.block1, .block3').forEach(el => {
+        observer.observe(el);
+      });
+
+      const intel = document.querySelector('.intel-text');
+      if (intel) observer.observe(intel);
+    });
+  </script>
+  <!-- botão flutuante WhatsApp -->
+  <a href="https://wa.me/5571993184061" target="_blank" class="whatsapp-float">
+    <img src="Imagens/Whatsapp.png" alt="WhatsApp logo in a green speech bubble with a white phone symbol, representing a messaging app, on a transparent background">
+  </a>
+</body>
+</html>

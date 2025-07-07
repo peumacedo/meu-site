@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sou Pedro Norien. Ajudo PMEs a enxergar onde estão perdendo margem — e a corrigir rápido com dados, planejamento e automação leve." />
+  <title>Pedro Norien – O que faço</title>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+  <!-- (todo o CSS permanece intacto) -->
+  <style>
+    :root{--c-primary:#005F6B;--c-primary-light:#008596;--c-dark:#1A1A1A;--c-light:#F5F7FA;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Montserrat',sans-serif;color:var(--c-dark);line-height:1.4;background:#FFFFFF;}
+    .container{width:90%;max-width:1080px;margin:0 auto;padding:clamp(2rem,4vw,4rem) 0;}
+    h1,h2,h3,h4{font-weight:700;line-height:1.2;color:var(--c-dark);}
+    h1{font-size:clamp(2rem,6vw,3.5rem);}h2{font-size:clamp(1.5rem,5vw,2.5rem);}h3{font-size:clamp(1.25rem,4.5vw,1.75rem);}
+    p{font-size:clamp(1rem,3.8vw,1.125rem);margin:.75rem 0;}
+    ul{list-style:none;padding:0;}
+    nav.sticky-nav{position:sticky;top:0;width:100%;background:#FFF;box-shadow:0 2px 4px rgba(0,0,0,.06);z-index:100;}
+    nav.sticky-nav a{display:inline-block;padding:1rem .5rem;margin:0 .75rem;font-weight:700;font-size:clamp(.9rem,3vw,1rem);color:var(--c-primary);text-decoration:none;}
+    nav.sticky-nav a:hover,nav.sticky-nav a.active{border-bottom:2px solid var(--c-primary-light);}
+    .hero-servicos{text-align:center;}
+    .cta-btn{display:inline-block;background:var(--c-primary);color:#FFF;font-weight:700;padding:.9rem 1.5rem;border-radius:8px;text-decoration:none;transition:background .25s;}
+    .cta-btn:hover{background:var(--c-primary-light);}    
+    .urgency-tag{display:inline-block;margin-top:.5rem;font-size:.9rem;color:#D82323;font-weight:700;}
+    .manifesto-metodo{background:var(--c-light);text-align:center;}
+    .manifesto-line{max-width:720px;margin:.75rem auto;}
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+    .card{background:#FFF;border:1px solid #E3E6EA;border-radius:12px;padding:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,.04);}    
+    .card-title{margin:.75rem 0 .5rem;font-size:1.15rem;color:var(--c-primary);}
+    .icon{height:40px;width:40px;background:var(--c-primary-light);border-radius:50%;}    
+    .step-strip{border-top:4px solid var(--c-primary-light);}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:1rem;}
+    .step{background:var(--c-light);padding:1.25rem 1rem;border-radius:12px;}
+    .step-num{display:inline-block;background:var(--c-primary);color:#FFF;border-radius:50%;width:32px;height:32px;text-align:center;line-height:32px;font-weight:700;margin-bottom:.5rem;}
+    .related-services li{font-size:.95rem;color:var(--c-primary);}    
+    .testimonials{background:#FFF;text-align:center;padding:clamp(2rem,4vw,4rem) 0;}
+    .testimonial-item{max-width:620px;margin:0 auto 1.5rem;font-style:italic;position:relative;padding-left:2rem;}
+    .testimonial-item:before{content:"“";font-size:3rem;position:absolute;left:0;top:-.25rem;color:var(--c-primary-light);}
+    .testimonial-author{font-weight:700;color:var(--c-dark);margin-top:.5rem;font-style:normal;}    
+    .cta-suave{text-align:center;background:var(--c-primary);color:#FFF;}
+    .cta-suave h2{color:#FFF;margin-bottom:1rem;}
+    .cta-suave .cta-btn{background:#FFF;color:var(--c-primary);}
+    .cta-suave .cta-btn:hover{background:#E1F2F4;}    
+    footer{background:#000;color:#FFF;text-align:center;padding:1rem 0;font-size:.85rem;}
+    .footer-link{color:#FFF;text-decoration:none;}
+    @media(prefers-color-scheme:dark){
+      body{background:#0F0F0F;color:#E6E6E6;}
+      .card{background:#181818;border-color:#333;}
+      .manifesto-metodo{background:#141414;}
+      .step{background:#181818;}
+      .cta-suave{background:var(--c-primary-light);}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO REDUZIDA -->
+<nav class="sticky-nav">
+  <a href="index.html">Home</a>
+  <a href="quem-sou.html">Quem sou</a>
+  <a href="o-que-faco.html">O que faço</a>
+</nav>
+
+  <!-- Bloco 1 – Hero + CTA Imediato -->
+  <section class="hero-servicos">
+    <div class="container">
+      <h1 class="headline">
+        Leitura Financeira 360° para decisões estratégicas com clareza.
+      </h1>
+      <p class="sub-headline">
+        Leio seus sinais financeiros e mostro onde sua margem pode crescer de forma estruturada e sustentável. Cada análise é personalizada: observo, traduzo e indico caminhos claros e seguros.
+      </p>
+
+      <!-- CTA TOP (texto mais humano e claro) -->
+      <a href="https://wa.me/55SEUNUMERO?text=Olá,+quero+iniciar+o+diagnóstico+inteligente" class="cta-btn">
+        Iniciar diagnóstico inteligente
+      </a>
+      <div class="urgency-tag">⚡ Vagas limitadas neste mês — resposta em até 1 dia útil</div>
+    </div>
+  </section>
+
+  <!-- Bloco 2 – Manifesto do Método (leve ajuste de tom) -->
+  <section class="manifesto-metodo">
+    <div class="container">
+      <p class="manifesto-line">Cada etapa do meu método resolve um gargalo sem criar dependência de consultor.</p>
+      <p class="manifesto-line">Você escolhe: diagnóstico, plano ou automação. Eu entrego de forma enxuta — com acompanhamento pessoal.</p>
+    </div>
+  </section>
+
+  <!-- Bloco 3 – Matriz de Serviços (intocado) -->
+  <section class="matriz-servicos">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Leitura 360° do Negócio</h3>
+          <p class="card-text">Retrato único de marketing, vendas, custos e caixa — revela lucros escondidos.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Roadmap &amp; Sprint Estratégico</h3>
+          <p class="card-text">Plano enxuto em 30 dias, focado nas alavancas de maior ROI.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Modelagem Financeira &amp; Fluxo de Caixa</h3>
+          <p class="card-text">Projete DRE e capital de giro antes que falte fôlego.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Análise de Custos, Preço &amp; Margem</h3>
+          <p class="card-text">Reveja custos e preços para elevar margem sem perder volume.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Automação &amp; Painéis de Gestão</h3>
+          <p class="card-text">Dashboards unem vendas e finanças para decisões em minutos.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true"></div>
+          <h3 class="card-title">Mentoria Decisions Lab 1-a-1</h3>
+          <p class="card-text">Sessões privadas para validar decisões críticas sem ruído.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco 4 – Step-strip (intocado) -->
+  <section class="step-strip">
+    <div class="container">
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h4>Revelar</h4>
+          <p>Escaneamos vendas, custos e caixa em 5 dias.</p>
+          <ul class="related-services"><li>Leitura 360°</li><li>Análise de Custos</li></ul>
+          <p><strong>Você recebe:</strong> mapa de lucros e riscos.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h4>Priorizar</h4>
+          <p>Listamos alavancas por impacto e prazo.</p>
+          <ul class="related-services"><li>Roadmap &amp; Sprint Estratégico</li><li>Mentoria 1-a-1</li></ul>
+          <p><strong>Você recebe:</strong> roteiro com ROI estimado.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h4>Acelerar</h4>
+          <p>Instalamos dashboards e guiamos a execução.</p>
+          <ul class="related-services"><li>Automação &amp; Dashboards</li><li>Modelagem Financeira</li></ul>
+          <p><strong>Você recebe:</strong> dashboards ao vivo + check-ins.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Bloco 5 – Prova Social (intocado) -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonial-item">
+        “Duplicamos a margem líquida em 12 dias — e sabemos exatamente de onde veio cada ponto de lucro.”
+        <p class="testimonial-author">Mariana A., CFO — Cliente PME</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final (leve ajuste no texto) -->
+  <section class="cta-suave">
+    <div class="container">
+      <h2>Vamos enxergar seus números juntos?</h2>
+      <a href="https://wa.me/55SEUNUMERO?text=Olá,+quero+iniciar+o+diagnóstico+inteligente" class="cta-btn">Começar com 3 perguntas</a>
+      <p style="margin-top:.75rem;font-size:.9rem;">Triagem inteligente com IA criada por mim — sigilo absoluto.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pedro Norien. <a href="#" class="footer-link">Política de Privacidade</a></p>
+  </footer>
+
+  <!-- Script para mês atual (urgency-tag) -->
+  <script>
+    const m = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+    const el=document.getElementById('mes-atual'); if(el) el.textContent=m[new Date().getMonth()];
+  </script>
+</body>
+</html>

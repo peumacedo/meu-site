@@ -90,12 +90,11 @@
     }
 
     .flyer {
-  max-width: 1080px;
-  width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+      width: 1080px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
     .block { padding: 60px 80px; }
     .separator { width: 100%; height: 1px; background-color: #D9D9D9; margin: 0; }
 
@@ -276,6 +275,74 @@
       color: #D82323;
       margin-top: 12px;
     }
+    @media (max-width: 768px) {
+  .flyer {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .block {
+    padding: 40px 16px;
+  }
+
+  .block1 h1 {
+    font-size: 36px;
+  }
+
+  .block1 p,
+  .block3 p,
+  .block3 ul li,
+  .block4 p,
+  .block4 .sub,
+  .block5 .cta,
+  .block5 .contact,
+  .urgency {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .block3 h2 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  .logo-bar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px;
+  }
+
+  nav.sticky-nav {
+    flex-direction: column;
+  }
+
+  .sticky-nav a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 14px !important;
+  }
+
+  .testimonials-container {
+    height: auto;
+  }
+
+  .testimonial {
+    font-size: 14px;
+  }
+
+  .testimonial-author {
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>

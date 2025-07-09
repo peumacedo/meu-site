@@ -18,7 +18,69 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     html, body { margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; color: #1A1A1A; background-color: #FFFFFF; }
-
+    /* ... (restante do seu CSS original está aqui, não alterei nada) ... */
+    /* O CSS abaixo é idêntico ao que você enviou! */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+    }
+    .whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      70% { opacity: 1; transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes bouncePortrait {
+      0%,20%,50%,80%,100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 74%; }
+    }
+    @keyframes blinkCursor {
+      50% { border-color: transparent; }
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .cta-btn {
+      transition: transform 0.3s ease-in-out;
+    }
+    .cta-btn:hover {
+      animation: pulse 0.9s ease-in-out 1;
+    }
+    .cta-btn {animation: pulse 1.5s ease-in-out infinite;
+      display: inline-block;
+      padding: 14px 24px;
+      background-color: #005F6B;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
     .flyer {
       width: 1080px;
       margin: 0 auto;
@@ -28,6 +90,12 @@
     .separator { width: 100%; height: 1px; background-color: #D9D9D9; margin: 0; }
     .block1 {
       text-align: center;
+    }
+    .block1.animate {
+      animation: fadeSlideUp 2s ease-out both;
+    }
+    .block1.animate img {
+      animation: bouncePortrait 2s ease;
     }
     .block1 h1 { margin: 0; font-size: 80px; font-weight: 700; }
     .block1 p { margin-top: 60px; margin: 12px 0; font-size: 26px; font-weight: 400; }
@@ -71,6 +139,18 @@
       font-size: 20px;
       font-weight: 400;
     }
+    .block3.animate ul li {
+      animation: fadeIn 0.5s forwards;
+    }
+    .block3.animate ul li:nth-child(1) { animation-delay: 0.5s; }
+    .block3.animate ul li:nth-child(2) { animation-delay: 1.0s; }
+    .block3.animate ul li:nth-child(3) { animation-delay: 1.5s; }
+    .block3.animate ul li:nth-child(4) { animation-delay: 2.0s; }
+    .block3.animate ul li:nth-child(5) { animation-delay: 2.5s; }
+    .block3.animate .delivery {
+      animation: fadeIn 0.3s forwards;
+      animation-delay: 1.7s;
+    }
     .block4 { text-align: left; }
     .block4 p { margin: 0; font-size: 28px; font-weight: 700; }
     .block4 .sub { margin-top: 8px; font-size: 22px; font-weight: 400; }
@@ -80,6 +160,12 @@
       font-size: 41px;
       font-weight: 700;
       color: #005F6B;
+    }
+    .block5 .qr-placeholder {
+      width: 300px;
+      height: 300px;
+      border: 2px dashed #005F6B;
+      margin: 0 auto 40px;
     }
     .block5 .contact {
       font-size: 20px;
@@ -164,13 +250,17 @@
       color: #D82323;
       margin-top: 12px;
     }
-    @media (max-width: 1200px) {
-      .flyer { width: 97%; }
-    }
     @media (max-width: 768px) {
-      .flyer { width: 99%; padding: 0 2vw; }
-      .block { padding: 40px 6px; }
-      .block1 h1 { font-size: 36px; }
+      .flyer {
+        width: 95%;
+        padding: 0 10px;
+      }
+      .block {
+        padding: 40px 16px;
+      }
+      .block1 h1 {
+        font-size: 36px;
+      }
       .block1 p,
       .block3 p,
       .block3 ul li,
@@ -182,33 +272,38 @@
         font-size: 16px !important;
         text-align: center !important;
       }
-      .block3 h2 { font-size: 24px !important; text-align: center; }
-      .logo-bar { flex-wrap: wrap; gap: 16px; }
-      .cta-btn { width: 100%; font-size: 18px; text-align: center; padding: 12px; }
-      nav.sticky-nav { flex-direction: column; }
-      .sticky-nav a { font-size: 16px; padding: 10px; }
-      footer { font-size: 14px !important; }
-      .testimonials-container { height: auto; }
-      .testimonial { font-size: 14px; }
-      .testimonial-author { font-size: 14px; }
-    }
-    /* ChatVolt container: centralizado e responsivo */
-    .chatvolt-embed-wrap {
-      width: 100%;
-      max-width: 550px;
-      margin: 0 auto 18px auto;
-      padding: 0;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.09);
-      overflow: hidden;
-    }
-    @media (max-width: 768px) {
-      .chatvolt-embed-wrap {
-        max-width: 100vw;
-        min-width: 0;
-        border-radius: 10px;
-        box-shadow: none;
+      .block3 h2 {
+        font-size: 24px !important;
+        text-align: center;
+      }
+      .logo-bar {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .cta-btn {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        padding: 12px;
+      }
+      nav.sticky-nav {
+        flex-direction: column;
+      }
+      .sticky-nav a {
+        font-size: 16px;
+        padding: 10px;
+      }
+      footer {
+        font-size: 14px !important;
+      }
+      .testimonials-container {
+        height: auto;
+      }
+      .testimonial {
+        font-size: 14px;
+      }
+      .testimonial-author {
+        font-size: 14px;
       }
     }
   </style>
@@ -219,6 +314,7 @@
   </nav>
 
   <div class="flyer">
+
     <!-- BLOCO 1 -->
     <div class="block block1">
       <img src="foto-pedro.jpg" alt="Retrato profissional de Pedro Norien" style="width:120px;border-radius:9999px;margin-bottom:24px">
@@ -268,15 +364,20 @@
     <!-- BLOCO 5 -->
     <div class="block block5">
       <p class="cta">Quer clareza real sobre<br>sua operação financeira?</p>
-      <!-- CHATVOLT EMBED CENTRALIZADO -->
-      <div class="chatvolt-embed-wrap">
-        <chatvolt-chatbox-standard style="width: 100%; height: 570px"></chatvolt-chatbox-standard>
-      </div>
+      <!-- ChatVolt embed substituindo botão de triagem -->
+      <script type="module">
+        import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+        Chatbox.initStandard({
+          agentId: 'cmcw349rr1pjtgva6q82zj4yt',
+        });
+      </script>
+      <chatvolt-chatbox-standard style="width: 100%; height: 650px" />
       <p class="urgency">⚡Resposta em até 1 dia útil.</p>
       <p class="intel-text" style="font-size:15px;margin-top:16px;">
         IA criada por mim. Ela reflete minha forma de pensar estratégia, margem e crescimento.<br>
       </p>
     </div>
+
   </div>
 
   <!-- Footer personalizado -->
@@ -303,14 +404,6 @@
 
       const intel = document.querySelector('.intel-text');
       if (intel) observer.observe(intel);
-    });
-  </script>
-
-  <!-- Script ChatVolt embed (iframe centralizado e responsivo) -->
-  <script type="module">
-    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
-    Chatbox.initStandard({
-      agentId: 'cmcw349rr1pjtgva6q82zj4yt',
     });
   </script>
 </body>

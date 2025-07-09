@@ -366,12 +366,18 @@
       <p class="cta">Quer clareza real sobre<br>sua operação financeira?</p>
       <!-- ChatVolt embed substituindo botão de triagem -->
       <script type="module">
-        import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
-        Chatbox.initStandard({
-          agentId: 'cmcw349rr1pjtgva6q82zj4yt',
-        });
-      </script>
-      <chatvolt-chatbox-standard style="width: 100%; height: 650px" />
+  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+  Chatbox.initStandard({
+    agentId: 'cmcw349rr1pjtgva6q82zj4yt',
+    interface: {
+      initialMessages: [
+        'Bem-vindo à Norien! Conte brevemente o desafio financeiro ou de gestão que você está enfrentando. Vou conduzir sua triagem e, ao final, apresentarei a melhor solução.'
+      ]
+    }
+  });
+</script>
+<chatvolt-chatbox-standard style="width: 100%; height: 450px" />
+
       <p class="urgency">⚡Resposta em até 1 dia útil.</p>
       <p class="intel-text" style="font-size:15px;margin-top:16px;">
         IA criada por mim. Ela reflete minha forma de pensar estratégia, margem e crescimento.<br>

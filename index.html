@@ -6,52 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Consultoria em performance financeira para decisões claras. +R$ 1,5 bi em dados estruturados para líderes estratégicos.">
   <meta name="theme-color" content="#005F6B">
+  <!-- Open Graph / WhatsApp / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.pedronorien.com.br/" />
+  <meta property="og:title" content="Pedro Norien – Inteligência Financeira & IA para Empresas" />
+  <meta property="og:description" content="Consultoria em performance financeira com IA. +R$ 1,5 bi em dados estruturados para decisões estratégicas." />
+  <meta property="og:image" content="https://www.pedronorien.com.br/imagem-preview.jpg" />
   <link rel="icon" href="favicon.ico">
   <title>Pedro Norien – Consultoria em Inteligência Financeira e IA para Empresas</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     html, body { margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; color: #1A1A1A; background-color: #FFFFFF; }
-    
-/* botão flutuante WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  background-color: #25D366;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-}
-.whatsapp-float img {
-  width: 36px;
-  height: 36px;
-}
-
-/* animações para o bloco1 */
-@keyframes fadeSlideUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  70% { opacity: 1; transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+    /* botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+    }
+    .whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+    /* animações para o bloco1 */
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      70% { opacity: 1; transform: translateY(-5px); }
+      100% { transform: translateY(0); }
     }
     @keyframes bouncePortrait {
       0%,20%,50%,80%,100% { transform: translateY(0); }
       40% { transform: translateY(-10px); }
       60% { transform: translateY(-5px); }
     }
-
-    /* fade-in sequencial para itens do bloco3 */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateX(-10px); }
       to   { opacity: 1; transform: translateX(0); }
     }
-
-    /* typewriter effect */
     @keyframes typing {
       from { width: 0; }
       to   { width: 74%; }
@@ -59,46 +59,35 @@
     @keyframes blinkCursor {
       50% { border-color: transparent; }
     }
-
-    /* 1. Definição da animação pulse */
     @keyframes pulse {
       0%   { transform: scale(1); }
       50%  { transform: scale(1.05); }
       100% { transform: scale(1); }
-    } 
-
-    /* 2. Garantir transição suave */
+    }
     .cta-btn {
       transition: transform 0.3s ease-in-out;
-    } 
-
-    /* 3. Disparar pulse ao passar o mouse */
+    }
     .cta-btn:hover {
       animation: pulse 0.9s ease-in-out 1;
-      }
-    /* 4. Estilo do botão */
-    .cta-btn {animation: pulse 1.5s ease-in-out infinite; 
-      display: inline-block; 
-      padding: 14px 24px; 
-      background-color: #005F6B; 
-      color: #FFFFFF; 
-      font-size: 24px; 
-      font-weight: 700; 
-      text-decoration: none; 
-      border-radius: 8px; 
+    }
+    .cta-btn {animation: pulse 1.5s ease-in-out infinite;
+      display: inline-block;
+      padding: 14px 24px;
+      background-color: #005F6B;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
       margin: 20px 0;
     }
-
     .flyer {
       width: 1080px;
       margin: 0 auto;
       box-sizing: border-box;
     }
-
     .block { padding: 60px 80px; }
     .separator { width: 100%; height: 1px; background-color: #D9D9D9; margin: 0; }
-
-    /* bloco1: só anima quando recebe .animate */
     .block1 {
       text-align: center;
     }
@@ -111,7 +100,6 @@
     .block1 h1 { margin: 0; font-size: 80px; font-weight: 700; }
     .block1 p { margin-top: 60px; margin: 12px 0; font-size: 26px; font-weight: 400; }
     .block1 .descriptor { margin-top: 12px; font-size: 20px; font-weight: 400; color: #005F6B; }
-
     .logo-bar { display: flex; justify-content: center; gap: 32px; margin-top: 20px;align-items: flex-end; }
     .logo-bar img {
       max-height: 40px;
@@ -119,14 +107,11 @@
       width: auto;
       object-fit: contain;
       transition: transform 0.3s ease;
-      
     }
-
     .block2 { text-align: left; }
     .block2 p { margin: 0; font-size: 30px; font-weight: 700;margin-bottom: 16px; }
     .block2 .sub { margin-top: 8px; font-size: 20px; font-weight: 400;line-height: 1.4;
-  color: #333333; }
-
+      color: #333333; }
     .block3 { background-color: #F5F7FA; }
     .block3 h2 { margin: 0; font-size: 36px; font-weight: 700; color: #005F6B; }
     .block3 p { margin: 12px 0; font-size: 22px; font-weight: 400; }
@@ -154,7 +139,6 @@
       font-size: 20px;
       font-weight: 400;
     }
-    /* só anima quando recebe .animate */
     .block3.animate ul li {
       animation: fadeIn 0.5s forwards;
     }
@@ -167,11 +151,9 @@
       animation: fadeIn 0.3s forwards;
       animation-delay: 1.7s;
     }
-
     .block4 { text-align: left; }
     .block4 p { margin: 0; font-size: 28px; font-weight: 700; }
     .block4 .sub { margin-top: 8px; font-size: 22px; font-weight: 400; }
-
     .block5 { background-color: #F5F7FA; text-align: center; }
     .block5 .cta {
       margin: 20px 0 40px;
@@ -192,8 +174,6 @@
       display: inline-block;
       text-align: left;
     }
-
-    /* typewriter: só anima quando .animate */
     .intel-text {
       display: inline-block;
       white-space: nowrap;
@@ -205,8 +185,6 @@
       animation: typing 5s steps(60) 0.1s forwards,
                  blinkCursor 1.0s step-end infinite;
     }
-
-    /* letreiro de testemunhos */
     .testimonials-container {
       overflow: hidden;
       height: 100px;
@@ -234,7 +212,6 @@
       from { transform: translateX(0); }
       to   { transform: translateX(-100%); }
     }
-
     .sticky-nav {
       position: sticky;
       top: 0;
@@ -257,7 +234,6 @@
     .sticky-nav a.active {
       border-bottom: 2px solid #005F6B;
     }
-
     .cta-btn {
       display: inline-block;
       padding: 14px 24px;
@@ -269,80 +245,80 @@
       border-radius: 8px;
       margin: 20px 0;
     }
-
     .urgency {
       font-size: 15px;
       color: #D82323;
       margin-top: 12px;
     }
     @media (max-width: 768px) {
-  .flyer {
-    width: 95%;
-    padding: 0 10px;
-  }
-
-  .block {
-    padding: 40px 16px;
-  }
-
-  .block1 h1 {
-    font-size: 36px;
-  }
-
-  .block1 p,
-  .block3 p,
-  .block3 ul li,
-  .block4 p,
-  .block4 .sub,
-  .block5 .cta,
-  .block5 .contact,
-  .urgency {
-    font-size: 16px !important;
-    text-align: center !important;
-  }
-
-  .block3 h2 {
-    font-size: 24px !important;
-    text-align: center;
-  }
-
-  .logo-bar {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .cta-btn {
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-    padding: 12px;
-  }
-
-  nav.sticky-nav {
-    flex-direction: column;
-  }
-
-  .sticky-nav a {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  footer {
-    font-size: 14px !important;
-  }
-
-  .testimonials-container {
-    height: auto;
-  }
-
-  .testimonial {
-    font-size: 14px;
-  }
-
-  .testimonial-author {
-    font-size: 14px;
-  }
-}
+      .flyer { width: 95%; padding: 0 10px; }
+      .block { padding: 40px 16px; }
+      .block1 h1 { font-size: 36px; }
+      .block1 p,
+      .block3 p,
+      .block3 ul li,
+      .block4 p,
+      .block4 .sub,
+      .block5 .cta,
+      .block5 .contact,
+      .urgency {
+        font-size: 16px !important;
+        text-align: center !important;
+      }
+      .block3 h2 { font-size: 24px !important; text-align: center; }
+      .logo-bar { flex-wrap: wrap; gap: 16px; }
+      .cta-btn { width: 100%; font-size: 18px; text-align: center; padding: 12px; }
+      nav.sticky-nav { flex-direction: column; }
+      .sticky-nav a { font-size: 16px; padding: 10px; }
+      footer { font-size: 14px !important; }
+      .testimonials-container { height: auto; }
+      .testimonial { font-size: 14px; }
+      .testimonial-author { font-size: 14px; }
+    }
+    /* ====== ChatVolt ====== */
+    .chatvolt-float {
+      position: fixed;
+      right: 20px;
+      bottom: 90px;
+      width: 56px;
+      height: 56px;
+      background: #005F6B;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1002;
+      cursor: pointer;
+    }
+    .chatvolt-float img {
+      width: 34px;
+      height: 34px;
+    }
+    .chatvolt-popup {
+      display: none;
+      position: fixed;
+      right: 15px;
+      bottom: 155px;
+      width: 360px;
+      max-width: 95vw;
+      height: 600px;
+      z-index: 1003;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #FFF;
+    }
+    @media (max-width: 768px) {
+      .chatvolt-popup {
+        right: 5px;
+        bottom: 80px;
+        width: 99vw;
+        height: 72vh;
+        min-height: 380px;
+        border-radius: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -351,7 +327,6 @@
   </nav>
 
   <div class="flyer">
-
     <!-- BLOCO 1 -->
     <div class="block block1">
       <img src="foto-pedro.jpg" alt="Retrato profissional de Pedro Norien" style="width:120px;border-radius:9999px;margin-bottom:24px">
@@ -365,7 +340,6 @@
         <img src="Imagens/CaffeineArmy.png" alt="Caffeine Army">
         <img src="Imagens/SantaHelena.png" alt="Santa Helena">
         <img src="Imagens/Souldila.png" alt="Souldila">
-
       </div>
     </div>
     <hr class="separator">
@@ -408,9 +382,8 @@
       <p class="urgency">⚡Resposta em até 1 dia útil.</p>
       <p class="intel-text" style="font-size:15px;margin-top:16px;">
         IA criada por mim. Ela reflete minha forma de pensar estratégia, margem e crescimento.<br>
-              </p>
+      </p>
     </div>
-
   </div>
 
   <!-- Footer personalizado -->
@@ -439,9 +412,40 @@
       if (intel) observer.observe(intel);
     });
   </script>
-  <!-- botão flutuante WhatsApp -->
+
+  <!-- Widget ChatVolt (oculto por padrão) -->
+  <div id="chatvolt-popup" class="chatvolt-popup">
+    <chatvolt-chatbox-standard style="width:100%;height:100%"></chatvolt-chatbox-standard>
+  </div>
+
+  <!-- Botão flutuante personalizado ChatVolt -->
+  <div class="chatvolt-float" id="chatvolt-toggle" title="Fale com IA">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712005.png" alt="Chat IA">
+  </div>
+
+  <!-- botão flutuante WhatsApp (inalterado) -->
   <a href="https://wa.me/5571993184061" target="_blank" class="whatsapp-float">
     <img src="Imagens/Whatsapp.png" alt="WhatsApp logo in a green speech bubble with a white phone symbol, representing a messaging app, on a transparent background">
   </a>
+
+  <!-- Script ChatVolt + toggle -->
+  <script type="module">
+    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+    Chatbox.initStandard({
+      agentId: 'cmcw349rr1pjtgva6q82zj4yt',
+    });
+    // Controle do popup
+    const toggle = document.getElementById('chatvolt-toggle');
+    const popup = document.getElementById('chatvolt-popup');
+    toggle.addEventListener('click', () => {
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    });
+    // Fecha chat ao clicar fora (opcional)
+    document.addEventListener('click', function(event) {
+      if (!popup.contains(event.target) && event.target !== toggle) {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
